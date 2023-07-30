@@ -1,38 +1,101 @@
+/* App.css */
+
 .App {
-  text-align: center;
+    text-align: center;
+    margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+    margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.random-player-button {
+    background-color: #28a745;
+}
+
+.random-player-button:hover {
+    background-color: #218838;
+}
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 5px #007bff;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #007bff;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #ff1302;
+    }
+}
+
+.glowing-message {
+    animation: glowing 2s infinite;
+}
+
+.background-image-container {
+    width: 300px;
+    height: 300px;
+    background-color: #f0f0f0;
+    background-image: url('');
+    /* Add your desired image URL here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #888;
+}
+
+.background-image-container::before {
+    content: '';
+    text-align: center;
+}
+
+input[type="file"] {
+    display: none;
 }
